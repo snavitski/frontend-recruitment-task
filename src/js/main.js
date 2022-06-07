@@ -1,24 +1,23 @@
 "use strict";
 
 const button = document.getElementById("btn");
-const popup = button.addEventListener("click", function () {
-	document.querySelector(".bg-popup").style.display = "flex";
-});
-const xButton = document
-	.querySelector(".close")
-	.addEventListener("click", function () {
-		document.querySelector(".bg-popup").style.display = "none";
-	});
-
+const addButton = document.createElement("button");
 let counter = 0;
+
+button.addEventListener("click", elementClick);
 
 function elementClick() {
 	counter++;
 	button.innerText = `clicked ${counter}`;
-
-	if (counter >= 5) {
-		button.removeEventListener("click", elementClick);
+	if (counter > 5) {
+		addButton.innerHTML = "Reset";
+		document.body.appendChild(addButton);
 	}
 }
 
-button.addEventListener("click", elementClick);
+button.addEventListener("click", function () {
+	document.querySelector(".bg-popup").style.display = "flex";
+});
+document.querySelector(".close").addEventListener("click", function () {
+	document.querySelector(".bg-popup").style.display = "none";
+});

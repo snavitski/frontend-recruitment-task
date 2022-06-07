@@ -5,29 +5,37 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap"
+		rel="stylesheet">
 	<title>[Siarhei] [Navitski] - Recruitment task</title>
-	<link rel="stylesheet" href="/src/css/main.css" </head>
+	<link rel="styleSheet" href="/sass/style.css">
+
+</head>
 
 <body>
-	<div class="container">
-		<div class="hero"></div>
-		<div class="content-hero">
-			<div class="title"><a>Lorem Ipsun</a></div>
-			<div class="copy">Infinitely scalable, feature-rich and cloud-native data management and protection for modern
-				and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.
+	<container>
+		<div class="section">
+			<div class="hero"></div>
+			<div class="content-hero">
+				<div class="title"><a>Lorem Ipsun</a></div>
+				<div class="copy">Infinitely scalable, feature-rich and cloud-native data management and protection for modern
+					and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.
+				</div>
+				<button type="button" id="btn" class="btn add-element">Button</button>
 			</div>
-			<button id="btn" class="btn">Button</button>
 		</div>
 
 		<!-- popup section-->
-
 		<div class="bg-popup">
 			<div class="popup-content">
-				<dic class="close">+</dic>
-				<h1>Alert!</h1>
-				<p>You have clicked X times to related button.</p>
-			</div>
-		</div>
-	</div>
+				<div class="close">+</div>
+				<div class="alert">
+					<h1>Alert!</h1>
+					<p>You have clicked <b>X times</b> to related button.</p>
+				</div>
+			</div </div>
+	</container>
 	<script src="/src/js/main.js"></script>
 </body>
