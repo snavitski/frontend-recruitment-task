@@ -2,11 +2,6 @@ const button = document.getElementById("btn");
 const resetButton = document.getElementById("reset-btn");
 let counter = 0;
 
-function hidenButton(button) {
-	if (button.length < 1) return;
-	resetButton.style.display = "none";
-}
-
 function setCount(newCount) {
 	counter = newCount;
 	button.innerText = `clicked ${counter}`;
