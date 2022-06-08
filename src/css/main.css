@@ -109,3 +109,6 @@ p {
 	font-size: 16px;
 	line-height: 150%;
 }
+.in-visible {
+	display: none;
+}

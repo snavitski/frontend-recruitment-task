@@ -1,19 +1,24 @@
-"use strict";
-
 const button = document.getElementById("btn");
-const addButton = document.createElement("button");
+const resetButton = document.getElementById("reset-btn");
 let counter = 0;
 
-button.addEventListener("click", elementClick);
+function hidenButton(button) {
+	if (button.length < 1) return;
+	resetButton.style.display = "none";
+}
 
-function elementClick() {
-	counter++;
+function setCount(newCount) {
+	counter = newCount;
 	button.innerText = `clicked ${counter}`;
 	if (counter > 5) {
-		addButton.innerHTML = "Reset";
-		document.body.appendChild(addButton);
+		resetButton.classList.remove("is-visible");
+	} else {
+		resetButton.classList.add("is-visible");
 	}
 }
+
+resetButton.addEventListener("click", () => setCount(0));
+button.addEventListener("click", () => setCount(counter + 1));
 
 button.addEventListener("click", function () {
 	document.querySelector(".bg-popup").style.display = "flex";
