@@ -1,3 +1,5 @@
+"use strict";
+
 const button = document.getElementById("btn");
 const resetButton = document.getElementById("reset-btn");
 let counter = 0;
@@ -7,6 +9,7 @@ function setCount(newCount) {
 	button.innerText = `clicked ${counter}`;
 	if (counter > 5) {
 		resetButton.classList.remove("is-visible");
+		console.log(resetButton);
 	} else {
 		resetButton.classList.add("is-visible");
 	}
