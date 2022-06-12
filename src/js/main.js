@@ -6,7 +6,7 @@ let counter = 0;
 
 function setCount(newCount) {
 	counter = newCount;
-	button.innerText = `clicked ${counter}`;
+	button.innerText = `Clicked ${counter}`;
 	if (counter > 5) {
 		resetButton.classList.remove("is-visible");
 		console.log(resetButton);
